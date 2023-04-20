@@ -10,6 +10,7 @@ import Foundation
 struct ConvertedSatellite: Identifiable {
     var id = UUID().uuidString
     
+    var name = ""
     var catalogNumber = ""
     var classification = ""
     var launchYear = ""
