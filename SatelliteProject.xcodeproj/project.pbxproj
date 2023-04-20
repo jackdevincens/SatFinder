@@ -8,17 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		C30F774F29F1A4CE00C430C3 /* SatelliteProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F774E29F1A4CE00C430C3 /* SatelliteProjectApp.swift */; };
-		C30F775129F1A4CE00C430C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F775029F1A4CE00C430C3 /* ContentView.swift */; };
+		C30F775129F1A4CE00C430C3 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F775029F1A4CE00C430C3 /* ListView.swift */; };
 		C30F775329F1A4CF00C430C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C30F775229F1A4CF00C430C3 /* Assets.xcassets */; };
 		C30F775629F1A4CF00C430C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C30F775529F1A4CF00C430C3 /* Preview Assets.xcassets */; };
+		C30F775F29F1A6DC00C430C3 /* Satellite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F775E29F1A6DC00C430C3 /* Satellite.swift */; };
+		C30F776129F1B51100C430C3 /* SatelliteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F776029F1B51100C430C3 /* SatelliteView.swift */; };
+		C30F776329F1B52C00C430C3 /* SatelliteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F776229F1B52C00C430C3 /* SatelliteViewModel.swift */; };
+		C30F776529F1B6A000C430C3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F776429F1B6A000C430C3 /* DetailView.swift */; };
+		C30F776A29F1CD4200C430C3 /* ConvertedSatellite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F776929F1CD4200C430C3 /* ConvertedSatellite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C30F774B29F1A4CE00C430C3 /* SatelliteProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SatelliteProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C30F774E29F1A4CE00C430C3 /* SatelliteProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteProjectApp.swift; sourceTree = "<group>"; };
-		C30F775029F1A4CE00C430C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C30F775029F1A4CE00C430C3 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		C30F775229F1A4CF00C430C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C30F775529F1A4CF00C430C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C30F775E29F1A6DC00C430C3 /* Satellite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Satellite.swift; sourceTree = "<group>"; };
+		C30F776029F1B51100C430C3 /* SatelliteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteView.swift; sourceTree = "<group>"; };
+		C30F776229F1B52C00C430C3 /* SatelliteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteViewModel.swift; sourceTree = "<group>"; };
+		C30F776429F1B6A000C430C3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		C30F776929F1CD4200C430C3 /* ConvertedSatellite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertedSatellite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				C30F774E29F1A4CE00C430C3 /* SatelliteProjectApp.swift */,
-				C30F775029F1A4CE00C430C3 /* ContentView.swift */,
+				C30F776629F1B6B000C430C3 /* Models */,
+				C30F776B29F1CD5B00C430C3 /* ViewModels */,
+				C30F776829F1B6C400C430C3 /* Views */,
 				C30F775229F1A4CF00C430C3 /* Assets.xcassets */,
 				C30F775429F1A4CF00C430C3 /* Preview Content */,
 			);
@@ -65,6 +77,33 @@
 				C30F775529F1A4CF00C430C3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C30F776629F1B6B000C430C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C30F775E29F1A6DC00C430C3 /* Satellite.swift */,
+				C30F776029F1B51100C430C3 /* SatelliteView.swift */,
+				C30F776929F1CD4200C430C3 /* ConvertedSatellite.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C30F776829F1B6C400C430C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C30F775029F1A4CE00C430C3 /* ListView.swift */,
+				C30F776429F1B6A000C430C3 /* DetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C30F776B29F1CD5B00C430C3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C30F776229F1B52C00C430C3 /* SatelliteViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +176,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C30F775129F1A4CE00C430C3 /* ContentView.swift in Sources */,
+				C30F776129F1B51100C430C3 /* SatelliteView.swift in Sources */,
+				C30F776529F1B6A000C430C3 /* DetailView.swift in Sources */,
+				C30F775129F1A4CE00C430C3 /* ListView.swift in Sources */,
+				C30F776329F1B52C00C430C3 /* SatelliteViewModel.swift in Sources */,
+				C30F776A29F1CD4200C430C3 /* ConvertedSatellite.swift in Sources */,
+				C30F775F29F1A6DC00C430C3 /* Satellite.swift in Sources */,
 				C30F774F29F1A4CE00C430C3 /* SatelliteProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
