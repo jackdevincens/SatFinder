@@ -11,23 +11,70 @@ struct ListView: View {
     @StateObject var satVM = SatViewModel()
     
     var body: some View {
-        VStack {
-            ZStack {
-                List(satVM.satellitesArray) { satellite in
+        NavigationStack {
+            List(satVM.satellitesArray) { satellite in
+                NavigationLink {
+                    DetailView(satellite: satellite)
+                } label: {
                     Text(satellite.name)
                 }
-                .listStyle(.plain)
+            }
+            .listStyle(.plain)
+            .navigationTitle("Satellites")
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    Button("Shuffle") {
+                        satVM.satellitesArray.shuffle()
+                    }
+                }
                 
-                if satVM.isLoading {
-                    ProgressView()
+                ToolbarItem(placement: .status) {
+                    Text("\(satVM.satellitesArray.count) Satellites")
+                }
+                
+                ToolbarItem(placement: .bottomBar) {
+                    Button("Search") {
+                        
+                    }
                 }
             }
         }
         .task {
-            await satVM.getData()
+            await satVM.getRawData()
         }
+
     }
 }
+//        NavigationStack {
+//            ZStack {
+//                List(satVM.satellitesArray) { satellite in
+//                    LazyVStack {
+//                        NavigationLink {
+//                            DetailView(satellite: satellite)
+//                        } label: {
+//                            Text(satellite.name)
+//                        }
+//                    }
+//                }
+//                .listStyle(.plain)
+//                .navigationTitle("Satellites")
+//                .toolbar {
+//                    ToolbarItem(placement: .status) {
+//                        Text("\(satVM.satellitesArray.count)/\(satVM.totalSatelliteCount) Loaded")
+//                    }
+//                }
+//
+//                if satVM.isLoading {
+//                    ProgressView()
+//                        .scaleEffect(4)
+//                }
+//            }
+//        }
+//        .task {
+//            await satVM.getRawData()
+//        }
+//    }
+//}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

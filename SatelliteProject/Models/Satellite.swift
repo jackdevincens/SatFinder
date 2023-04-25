@@ -2,19 +2,21 @@
 //  Satellite.swift
 //  SatelliteProject
 //
-//  Created by Jack Marshall DeVincens on 4/20/23.
+//  Created by Jack Marshall DeVincens on 4/24/23.
 //
 
 import Foundation
 
-struct Satellite: Codable, Identifiable {
-    let id = UUID().uuidString
+struct Satellite: Identifiable {
+    var id = UUID().uuidString
     
     var name = ""
-    var line1 = ""
-    var line2 = ""
-    
-    enum CodingKeys: String, CodingKey {
-        case name, line1, line2
-    }
+    var catalogNumber = ""
+    var classification = ""
+    var launchYear = ""
+    var launchNumber = ""
+    var epoch = ""
+    var inclination = ""
+    var revolutionsPerDay = ""
+    var totalRevolutions = ""
 }

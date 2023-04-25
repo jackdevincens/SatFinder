@@ -16,7 +16,7 @@ struct ConvertedSatellite: Identifiable {
     var launchYear = ""
     var launchNumber = ""
     var epoch = ""
-    var inclination = "" //write func to convert inclination to pro/retro
+    var inclination = "" 
     var revolutionsPerDay = ""
     var totalRevolutions = ""
 }
