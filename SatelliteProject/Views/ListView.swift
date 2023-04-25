@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct ListView: View {
     @StateObject var satVM = SatViewModel()
     @State private var searchText = ""
