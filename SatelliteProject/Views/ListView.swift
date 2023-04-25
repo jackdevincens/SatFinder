@@ -9,10 +9,12 @@ import SwiftUI
 
 struct ListView: View {
     @StateObject var satVM = SatViewModel()
+    @State private var searchText = ""
+    @State private var isSearch = false
     
     var body: some View {
         NavigationStack {
-            List(satVM.satellitesArray) { satellite in
+            List(filteredSatellites) { satellite in
                 NavigationLink {
                     DetailView(satellite: satellite)
                 } label: {
@@ -23,58 +25,40 @@ struct ListView: View {
             .navigationTitle("Satellites")
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
-                    Button("Shuffle") {
-                        satVM.satellitesArray.shuffle()
-                    }
+                    Text("")
                 }
                 
                 ToolbarItem(placement: .status) {
-                    Text("\(satVM.satellitesArray.count) Satellites")
+                    Text("\(filteredSatellites.count) Satellites")
                 }
-                
+
                 ToolbarItem(placement: .bottomBar) {
-                    Button("Search") {
-                        
+                    Button {
+                        satVM.satellitesArray.shuffle()
+                    } label: {
+                        Image(systemName: "shuffle")
                     }
+
                 }
             }
         }
         .task {
             await satVM.getRawData()
         }
-
+        .searchable(text: $searchText, prompt: "Search")
+    }
+    
+    var filteredSatellites: [RawSatellite] {
+        if searchText.isEmpty {
+            return satVM.satellitesArray
+        } else {
+            return satVM.satellitesArray.filter { satellite in
+                satellite.name.localizedCaseInsensitiveContains(searchText)
+            }
+        }
     }
 }
-//        NavigationStack {
-//            ZStack {
-//                List(satVM.satellitesArray) { satellite in
-//                    LazyVStack {
-//                        NavigationLink {
-//                            DetailView(satellite: satellite)
-//                        } label: {
-//                            Text(satellite.name)
-//                        }
-//                    }
-//                }
-//                .listStyle(.plain)
-//                .navigationTitle("Satellites")
-//                .toolbar {
-//                    ToolbarItem(placement: .status) {
-//                        Text("\(satVM.satellitesArray.count)/\(satVM.totalSatelliteCount) Loaded")
-//                    }
-//                }
-//
-//                if satVM.isLoading {
-//                    ProgressView()
-//                        .scaleEffect(4)
-//                }
-//            }
-//        }
-//        .task {
-//            await satVM.getRawData()
-//        }
-//    }
-//}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

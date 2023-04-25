@@ -41,8 +41,10 @@ struct DetailView: View {
                 
                 Text(satellite.satelliteId)
             }
+            .font(.title3)
             
             Text("\(satellite.name) was the \(detailVM.satellite.launchNumber) launch of \(detailVM.satellite.launchYear)")
+                .font(.title3)
                 .lineLimit(1)
                 .minimumScaleFactor(0.5)
             
@@ -50,16 +52,19 @@ struct DetailView: View {
                 Text("Orbit Inclination:")
                     .bold()
                 
-                Text("Inclination")
+                Text("\(detailVM.satellite.inclination)")
             }
+            .font(.title3)
             
             Text("It has completed \(detailVM.satellite.totalRevolutions) orbits as of \(detailVM.satellite.epoch)")
-                .lineLimit(2)
+                .font(.title3)
+                .lineLimit(3)
                 .minimumScaleFactor(0.5)
             
             
             Text("It completes \(detailVM.satellite.revolutionsPerDay) orbits around Earth every 24 hours.")
-                .lineLimit(2)
+                .font(.title3)
+                .lineLimit(3)
                 .minimumScaleFactor(0.5)
             
             Spacer()
