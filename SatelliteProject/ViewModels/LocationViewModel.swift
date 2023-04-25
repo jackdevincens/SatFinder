@@ -57,21 +57,6 @@ class LocationViewModel: ObservableObject {
             } catch {
                 print("ERROR: \(error.localizedDescription)")
             }
-            //            CLGeocoder().reverseGeocodeLocation(location) { placemarks, error in
-            //                            if let error = error {
-            //                                print("ERROR: \(error.localizedDescription)")
-            //                            } else if let placemark = placemarks?.first {
-            //                                var name = ""
-            //                                if let country = placemark.country {
-            //                                    name = country
-            //                                } else if let ocean = placemark.ocean {
-            //                                    name = ocean
-            //                                } else {
-            //                                    name = "Unknown location"
-            //                                }
-            //                                self.locationName = name
-            //                            }
-            //                        }
             isLoading = false
         } catch {
             print("ERROR: \(error.localizedDescription)")

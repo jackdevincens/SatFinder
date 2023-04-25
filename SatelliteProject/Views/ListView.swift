@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-//Test
 
 struct ListView: View {
     @StateObject var satVM = SatViewModel()
