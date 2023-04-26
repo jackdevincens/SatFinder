@@ -22,6 +22,7 @@
 		C3549EE429F75069002DDCAF /* active_satellites.json in Resources */ = {isa = PBXBuildFile; fileRef = C3549EE329F75069002DDCAF /* active_satellites.json */; };
 		C3549EE629F75B26002DDCAF /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3549EE529F75B26002DDCAF /* DetailViewModel.swift */; };
 		C3549EEA29F76289002DDCAF /* Satellite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3549EE929F76289002DDCAF /* Satellite.swift */; };
+		C3725DDB29F998D100B32DA4 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3725DDA29F998D100B32DA4 /* APIKey.swift */; };
 		C3D305D429F484CE0085D284 /* satellites_by_country.json in Resources */ = {isa = PBXBuildFile; fileRef = C3D305D329F484CE0085D284 /* satellites_by_country.json */; };
 		C3D305D629F484DC0085D284 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D305D529F484DC0085D284 /* Country.swift */; };
 		C3D305DA29F485BF0085D284 /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D305D929F485BF0085D284 /* CountriesViewModel.swift */; };
@@ -44,6 +45,7 @@
 		C3549EE329F75069002DDCAF /* active_satellites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = active_satellites.json; sourceTree = "<group>"; };
 		C3549EE529F75B26002DDCAF /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		C3549EE929F76289002DDCAF /* Satellite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Satellite.swift; sourceTree = "<group>"; };
+		C3725DDA29F998D100B32DA4 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		C3D305D329F484CE0085D284 /* satellites_by_country.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = satellites_by_country.json; sourceTree = "<group>"; };
 		C3D305D529F484DC0085D284 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		C3D305D929F485BF0085D284 /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				C30F776829F1B6C400C430C3 /* Views */,
 				C3D305D329F484CE0085D284 /* satellites_by_country.json */,
 				C3549EE329F75069002DDCAF /* active_satellites.json */,
+				C3725DDA29F998D100B32DA4 /* APIKey.swift */,
 				C30F775229F1A4CF00C430C3 /* Assets.xcassets */,
 				C30F775429F1A4CF00C430C3 /* Preview Content */,
 			);
@@ -209,6 +212,7 @@
 				C30F775129F1A4CE00C430C3 /* ListView.swift in Sources */,
 				C30F777529F20BB900C430C3 /* MapView.swift in Sources */,
 				C3549EE029F74AE9002DDCAF /* RawSatellite.swift in Sources */,
+				C3725DDB29F998D100B32DA4 /* APIKey.swift in Sources */,
 				C3D305D629F484DC0085D284 /* Country.swift in Sources */,
 				C30F776329F1B52C00C430C3 /* SatelliteViewModel.swift in Sources */,
 				C30F776A29F1CD4200C430C3 /* ConvertedSatellite.swift in Sources */,

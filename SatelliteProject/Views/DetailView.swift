@@ -74,7 +74,7 @@ struct DetailView: View {
         .padding()
         .navigationBarTitleDisplayMode(.inline)
         .task {
-            detailVM.urlString = "https://api.n2yo.com/rest/v1/satellite/tle/\(satellite.satelliteId)&apiKey=DUR6WX-GQ7YC3-Z3QE4B-50R6"
+            detailVM.urlString = "https://api.n2yo.com/rest/v1/satellite/tle/\(satellite.satelliteId)&apiKey=\(APIKey)"
             await detailVM.getData()
         }
     }

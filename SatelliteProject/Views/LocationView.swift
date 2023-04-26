@@ -36,7 +36,7 @@ struct LocationView: View {
                     
                     Button("Update Location") {
                         Task {
-                            locVM.urlString = "https://api.n2yo.com/rest/v1/satellite/positions/\(satellite.satelliteId)/41.702/-76.014/0/1/&apiKey=DUR6WX-GQ7YC3-Z3QE4B-50R6"
+                            locVM.urlString = "https://api.n2yo.com/rest/v1/satellite/positions/\(satellite.satelliteId)/41.702/-76.014/0/1/&apiKey=\(APIKey)"
                             await locVM.getData()
                             centerCoordinate = CLLocationCoordinate2D(latitude: locVM.latitude, longitude: locVM.longitude)
                         }
@@ -51,7 +51,7 @@ struct LocationView: View {
             }
         }
         .task {
-            locVM.urlString = "https://api.n2yo.com/rest/v1/satellite/positions/\(satellite.satelliteId)/41.702/-76.014/0/1/&apiKey=DUR6WX-GQ7YC3-Z3QE4B-50R6"
+            locVM.urlString = "https://api.n2yo.com/rest/v1/satellite/positions/\(satellite.satelliteId)/41.702/-76.014/0/1/&apiKey=\(APIKey)"
             await locVM.getData()
             centerCoordinate = CLLocationCoordinate2D(latitude: locVM.latitude, longitude: locVM.longitude)
         }
@@ -61,7 +61,7 @@ struct LocationView: View {
 
 struct LocationView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationView(satellite: RawSatellite(name: "Centauri-2", satelliteId: "25635"))
+        LocationView(satellite: RawSatellite(name: "Orsted", satelliteId: "25635"))
             .environmentObject(LocationViewModel())
     }
 }

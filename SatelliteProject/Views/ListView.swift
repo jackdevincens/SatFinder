@@ -10,7 +10,7 @@ import SwiftUI
 struct ListView: View {
     @StateObject var satVM = SatViewModel()
     @State private var searchText = ""
-    @State private var isSearch = false
+    @FocusState private var textFieldIsFocused: Bool
     
     var body: some View {
         NavigationStack {
@@ -31,14 +31,15 @@ struct ListView: View {
                 ToolbarItem(placement: .status) {
                     Text("\(filteredSatellites.count) Satellites")
                 }
-
+                
                 ToolbarItem(placement: .bottomBar) {
                     Button {
                         satVM.satellitesArray.shuffle()
+                        textFieldIsFocused = false
                     } label: {
                         Image(systemName: "shuffle")
                     }
-
+                    
                 }
             }
         }
@@ -46,7 +47,9 @@ struct ListView: View {
             await satVM.getRawData()
         }
         .searchable(text: $searchText, prompt: "Search")
+        
     }
+    
     
     var filteredSatellites: [RawSatellite] {
         if searchText.isEmpty {
