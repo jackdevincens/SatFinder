@@ -4,7 +4,7 @@ Final Project for a Swift college course. Deleted and reuploaded due to sensitiv
 TLE = Two-Line Element of a satellite. The standard protocol for storing information about a satellite as numbers and letters.
 
 The Xcode Project itself follows the MVVM design pattern. Files within the project are organized as follows:
-- ## Models: ##
+- ### Models: ###
     - Satellite: A struct that contains the values decoded from the TLE of a satellite
     - RawSatellite: A struct that contains a satellite's name and NORAD ID
     - LocationSatellite: A struct that contains a satellite's latitude, longitude, and altitude
@@ -14,7 +14,7 @@ The Xcode Project itself follows the MVVM design pattern. Files within the proje
     - DetailViewModel: A file that uses a satellite's NORAD ID to call an API and fetch that satellite's TLE, then decode it and create a Satellite object from the info
     - LocationViewModel: A file that uses a satellite's NORAD ID to call an API and fetch that satellite's location information.
     - CountriesViewModel: A file that parses the local JSON of countries/organizations and populates an array with Country objects
-- Views:
+- #### Views: ####
     - Launch Screen: The launch screen to be displayed upon startup.
     - ListView: The main view of the app. Upon loading of the NavigationStack the SatelliteViewModel's getRawData method is called, and the satellitesArray is used to populate the list
     - DetailView: Upon tapping on a satellite in the list, the user is directed to a view containing information about the satellite. TLE info is fetched and decoded here as opposed to doing so for all satellites upon startup
