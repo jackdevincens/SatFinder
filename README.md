@@ -4,12 +4,12 @@ Final Project for a Swift college course. Deleted and reuploaded due to sensitiv
 TLE = Two-Line Element of a satellite. The standard protocol for storing information about a satellite as numbers and letters.
 
 The Xcode Project itself follows the MVVM design pattern. Files within the project are organized as follows:
-- Models:
+- ## Models: ##
     - Satellite: A struct that contains the values decoded from the TLE of a satellite
     - RawSatellite: A struct that contains a satellite's name and NORAD ID
     - LocationSatellite: A struct that contains a satellite's latitude, longitude, and altitude
     - Country: A struct representing a country/organization containing an array of satellite ids belonging to it
-- ViewModels:
+- ### ViewModels: ###
     - SatelliteViewModel: A file that parses the local JSON of active satellites and populates an array with RawSatellite objects
     - DetailViewModel: A file that uses a satellite's NORAD ID to call an API and fetch that satellite's TLE, then decode it and create a Satellite object from the info
     - LocationViewModel: A file that uses a satellite's NORAD ID to call an API and fetch that satellite's location information.
