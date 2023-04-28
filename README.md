@@ -29,10 +29,10 @@ All JSON data is either fetched from N2YO.com (which requires an API Key) or dow
 Files in the Additional Files folder were updated as of April 27, 2023 and therefore may not be accurate in the future.
 
 ## Additional Files: ##
-    - JSONs: A folder containing all the raw JSONs downloaded from CelesTrak
-    - JSONEditor.py: A python script that parses through all JSON files downloaded from CelesTrak and creates the active_satellites JSON for use in the project
-        - NOTE: CelesTrak's active satellites JSON included almost all of the satellites from the other files, however there were 255 not found in this file that were found in others
-    - launchscreen/logo: Self explanatory, the launchscreen and logo I used for the project. The launchscreen was created by myself in gimp, using images from the internet. The logo is from the internet as well
-    - SatelliteCountryScraper: An R script (in Quarto Doc and pdf format) Used to scrape N2YO's website and create a JSON of countries/organizations and the satellites (by ID) they currently own
-        - NOTE: I only needed to create this file because I could not find an API offering this information. N2YO may create an API for this purpose in the future though, so it may become unnecessary
+- **JSONs:** A folder containing all the raw JSONs downloaded from CelesTrak
+- **JSONEditor.py:** A python script that parses through all JSON files downloaded from CelesTrak and creates the active_satellites JSON for use in the project
+    - **NOTE:** CelesTrak's active satellites JSON included almost all of the satellites from the other files, however there were 255 not found in this file that were found in others
+- **launchscreen/logo:** Self explanatory, the launchscreen and logo I used for the project. The launchscreen was created by myself in gimp, using images from the internet. The logo is from the internet as well
+- **SatelliteCountryScraper:** An R script (in Quarto Doc and pdf format) Used to scrape N2YO's website and create a JSON of countries/organizations and the satellites (by ID) they currently own
+    - **NOTE:** I only needed to create this file because I could not find an API offering this information. N2YO may create an API for this purpose in the future though, so it may become unnecessary
     
