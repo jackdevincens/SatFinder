@@ -22,6 +22,7 @@ The Xcode Project itself follows the MVVM design pattern. Files within the proje
     - MapView: The view which displays the current location of a satellite as a blue circle.
 
 **satellites_by_country:** A JSON created from scraping N2YO's website. This contains an array of objects with the name, code, and an array of satellite IDs belonging to a country or organization
+
 **active_satellites:** A JSON created from restructuring JSONs downloaded from CelesTrak. An Array of objects containing the name and ID of a satellite
 
 The two above JSONs should be added to the Xcode project to make the app work properly
