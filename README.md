@@ -21,15 +21,14 @@ The Xcode Project itself follows the MVVM design pattern. Files within the proje
     - LocationView: A view which is displayed as the lower half of the DetailView. Calls the API and returns location information for a satellite, then creates a MapView. Also contains an update location button to refetch data
     - MapView: The view which displays the current location of a satellite as a blue circle.
 
-#### satellites_by_country: #### 
-A JSON created from scraping N2YO's website. This contains an array of objects with the name, code, and an array of satellite IDs belonging to a country or organization
-active_satellites: A JSON created from restructuring JSONs downloaded from CelesTrak. An Array of objects containing the name and ID of a satellite
+**satellites_by_country:** A JSON created from scraping N2YO's website. This contains an array of objects with the name, code, and an array of satellite IDs belonging to a country or organization
+**active_satellites:** A JSON created from restructuring JSONs downloaded from CelesTrak. An Array of objects containing the name and ID of a satellite
 
 The two above JSONs should be added to the Xcode project to make the app work properly
 All JSON data is either fetched from N2YO.com (which requires an API Key) or downloaded in JSON format from CelesTrak.org (which is also where N2YO gets its data).
 Files in the Additional Files folder were updated as of April 27, 2023 and therefore may not be accurate in the future.
 
-Additional Files:
+## Additional Files: ##
     - JSONs: A folder containing all the raw JSONs downloaded from CelesTrak
     - JSONEditor.py: A python script that parses through all JSON files downloaded from CelesTrak and creates the active_satellites JSON for use in the project
         - NOTE: CelesTrak's active satellites JSON included almost all of the satellites from the other files, however there were 255 not found in this file that were found in others
