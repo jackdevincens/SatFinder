@@ -43,35 +43,51 @@ class DetailViewModel: ObservableObject {
     }
     
     func line1Func(line: String) -> [String] {
-        func epochToJulian(year: Int, day: Int) -> String {
-            func dateStringFromDayOfYear(dayOfYear: Int, yearVal: Int) -> String {
-                // Create a date component with the given day of year
-                var dateComponents = DateComponents()
-                dateComponents.day = dayOfYear
-                
-                // Add year information to date components
-                dateComponents.year = year
-                
-                // Create a calendar instance
-                let calendar = Calendar.current
-                
-                // Use the calendar to get the date from the date components
-                let date = calendar.date(from: dateComponents)!
-                
-                // Create a date formatter to format the date as a string
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "MMMM d"
-                
-                // Format the date as a string and return it
-                return dateFormatter.string(from: date)
-            }
-
+        func epochToDate(epoch: String) -> String {
             func isLeapYear(year: Int) -> Bool {
                 return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)
             }
             
-            let date = dateStringFromDayOfYear(dayOfYear: day, yearVal: year)
-            return date  + ", \(year)"
+            func dateStringFrom(days: Double, isLeapYear: Bool) -> String {
+                let daysPerMonth: [Double] = [31.0, isLeapYear ? 29.0 : 28.0, 31.0, 30.0, 31.0, 30.0, 31.0, 31.0, 30.0, 31.0, 30.0, 31.0]
+                var month = 0
+                var daysLeft = (days - 1).rounded(.down)
+                
+                for daysInMonth in daysPerMonth {
+                    if daysLeft < daysInMonth {
+                        break
+                    }
+                    month += 1
+                    daysLeft -= daysInMonth
+                }
+                
+                let monthName: String
+                switch month {
+                case 0: monthName = "January"
+                case 1: monthName = "February"
+                case 2: monthName = "March"
+                case 3: monthName = "April"
+                case 4: monthName = "May"
+                case 5: monthName = "June"
+                case 6: monthName = "July"
+                case 7: monthName = "August"
+                case 8: monthName = "September"
+                case 9: monthName = "October"
+                case 10: monthName = "November"
+                default: monthName = "December"
+                }
+                
+                let day = Int(daysLeft) + 1 // add 1 to zero-based index
+                
+                return "\(monthName) \(day)"
+            }
+            
+            let year = String(epoch.prefix(2))
+            let day = Double(epoch.dropFirst(2))
+            let stringYear = (Int(year)! <= 56) ? "20\(year)" : "19\(year)"
+            let stringDate = dateStringFrom(days: day!, isLeapYear: isLeapYear(year: Int(stringYear)!))
+
+            return "\(stringDate), \(stringYear)"
         }
         
         func addSuffixToNumber(_ numberString: String) -> String {
@@ -103,12 +119,10 @@ class DetailViewModel: ObservableObject {
         let launchYearString = String(line.dropFirst(9).prefix(2))
         let launchYear = (Int(launchYearString)! <= 56) ? "20\(launchYearString)" : "19\(launchYearString)"
         let launchNumber = addSuffixToNumber((String(line.dropFirst(11).prefix(3))))
-        let epochYear = String(line.dropFirst(18).prefix(2))
-        let fullYear = (Int(epochYear)! <= 56) ? "20\(epochYear)" : "19\(epochYear)"
-        let epochDay = String(line.dropFirst(20).prefix(3))
-        let epoch = epochToJulian(year: Int(fullYear)!, day: Int(epochDay)!)
+        let epoch = String(line.dropFirst(18).prefix(14))
+        let dateString = epochToDate(epoch: epoch)
         
-        let returned = [catalogNumber, classification, launchYear, launchNumber, epoch]
+        let returned = [catalogNumber, classification, launchYear, launchNumber, dateString]
         
         return returned
     }

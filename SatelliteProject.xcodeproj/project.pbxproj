@@ -19,6 +19,7 @@
 		C30F777129F1E3DC00C430C3 /* LocationSatellite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F777029F1E3DC00C430C3 /* LocationSatellite.swift */; };
 		C30F777329F1F9B500C430C3 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F777229F1F9B500C430C3 /* LocationView.swift */; };
 		C30F777529F20BB900C430C3 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30F777429F20BB900C430C3 /* MapView.swift */; };
+		C33378F229FC4FAA00922863 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33378F129FC4FAA00922863 /* Launch Screen.storyboard */; };
 		C3549EE029F74AE9002DDCAF /* RawSatellite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3549EDF29F74AE9002DDCAF /* RawSatellite.swift */; };
 		C3549EE629F75B26002DDCAF /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3549EE529F75B26002DDCAF /* DetailViewModel.swift */; };
 		C3549EEA29F76289002DDCAF /* Satellite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3549EE929F76289002DDCAF /* Satellite.swift */; };
@@ -42,6 +43,8 @@
 		C30F777029F1E3DC00C430C3 /* LocationSatellite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSatellite.swift; sourceTree = "<group>"; };
 		C30F777229F1F9B500C430C3 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		C30F777429F20BB900C430C3 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		C33378EE29FC4B0C00922863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C33378F129FC4FAA00922863 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		C3549EDF29F74AE9002DDCAF /* RawSatellite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawSatellite.swift; sourceTree = "<group>"; };
 		C3549EE529F75B26002DDCAF /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		C3549EE929F76289002DDCAF /* Satellite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Satellite.swift; sourceTree = "<group>"; };
@@ -81,7 +84,9 @@
 		C30F774D29F1A4CE00C430C3 /* SatelliteProject */ = {
 			isa = PBXGroup;
 			children = (
+				C33378EE29FC4B0C00922863 /* Info.plist */,
 				C30F774E29F1A4CE00C430C3 /* SatelliteProjectApp.swift */,
+				C33378F129FC4FAA00922863 /* Launch Screen.storyboard */,
 				C30F776629F1B6B000C430C3 /* Models */,
 				C30F776B29F1CD5B00C430C3 /* ViewModels */,
 				C30F776829F1B6C400C430C3 /* Views */,
@@ -197,6 +202,7 @@
 				C30F775629F1A4CF00C430C3 /* Preview Assets.xcassets in Resources */,
 				C3D305D429F484CE0085D284 /* satellites_by_country.json in Resources */,
 				C30F775329F1A4CF00C430C3 /* Assets.xcassets in Resources */,
+				C33378F229FC4FAA00922863 /* Launch Screen.storyboard in Resources */,
 				C30EFAD429FAF8FA001CCF1A /* active_satellites.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,9 +360,10 @@
 				DEVELOPMENT_TEAM = AKLT87BTD2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SatelliteProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -383,9 +390,10 @@
 				DEVELOPMENT_TEAM = AKLT87BTD2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SatelliteProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
