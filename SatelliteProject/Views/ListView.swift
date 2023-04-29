@@ -52,6 +52,7 @@ struct ListView: View {
         .searchable(text: $searchText, prompt: "Search")
         
     }
+        
     
     
     var filteredSatellites: [RawSatellite] {

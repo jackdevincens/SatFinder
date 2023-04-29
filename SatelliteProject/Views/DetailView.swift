@@ -76,10 +76,12 @@ struct DetailView: View {
         }
         .padding()
         .navigationBarTitleDisplayMode(.inline)
+        .foregroundColor(.yellow)
         .task {
             detailVM.urlString = "https://api.n2yo.com/rest/v1/satellite/tle/\(satellite.satelliteId)&apiKey=\(APIKey)"
             await detailVM.getData()
         }
+        .background(Image("background"))
     }
 }
 
