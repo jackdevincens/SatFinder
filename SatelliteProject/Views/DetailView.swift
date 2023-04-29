@@ -17,7 +17,7 @@ struct DetailView: View {
         VStack (alignment: .leading){
             HStack {
                 Text(satellite.name)
-                    .font(.title)
+                    .font(.custom("Orbitron-Medium", size: 24))
                     .bold()
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
@@ -25,6 +25,7 @@ struct DetailView: View {
                 Spacer()
                 
                 Text(countriesVM.countryName)
+                    .font(.custom("Orbitron-Regular", size: 16))
                     .lineLimit(4)
                     .minimumScaleFactor(0.5)
             }
@@ -36,7 +37,8 @@ struct DetailView: View {
                 .frame(maxWidth: .infinity, maxHeight: 2)
             
             HStack (alignment: .top){
-                Text("NORAD Catalog Number:")
+                Text("NORAD Catalog Number :")
+                    .font(.custom("Orbitron-Regular", size: 18))
                     .bold()
                 
                 Text(satellite.satelliteId)
@@ -44,12 +46,13 @@ struct DetailView: View {
             .font(.title3)
             
             Text("\(satellite.name) was the \(detailVM.satellite.launchNumber) launch of \(detailVM.satellite.launchYear)")
-                .font(.title3)
-                .lineLimit(1)
+                .font(.custom("Orbitron-Regular", size: 18))
+                .lineLimit(2)
                 .minimumScaleFactor(0.5)
             
             HStack (alignment: .top){
                 Text("Orbit Inclination:")
+                    .font(.custom("Orbitron-Regular", size: 18))
                     .bold()
                 
                 Text("\(detailVM.satellite.inclination)")
@@ -57,13 +60,13 @@ struct DetailView: View {
             .font(.title3)
             
             Text("It has completed \(detailVM.satellite.totalRevolutions) orbits as of \(detailVM.satellite.epoch)")
-                .font(.title3)
+                .font(.custom("Orbitron-Regular", size: 18))
                 .lineLimit(3)
                 .minimumScaleFactor(0.5)
             
             
             Text("It completes \(detailVM.satellite.revolutionsPerDay) orbits around Earth every 24 hours.")
-                .font(.title3)
+                .font(.custom("Orbitron-Regular", size: 18))
                 .lineLimit(3)
                 .minimumScaleFactor(0.5)
             

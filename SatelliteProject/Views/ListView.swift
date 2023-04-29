@@ -20,6 +20,7 @@ struct ListView: View {
                     DetailView(satellite: satellite)
                 } label: {
                     Text(satellite.name)
+                        .font(.custom("Orbitron-Regular", size: 20))
                 }
             }
             .listStyle(.plain)
@@ -44,6 +45,7 @@ struct ListView: View {
                 }
             }
         }
+        .font(.custom("Orbitron-Black", size: 20))
         .task {
             await satVM.getRawData()
         }

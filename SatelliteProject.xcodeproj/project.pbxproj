@@ -26,6 +26,9 @@
 		C3D305D429F484CE0085D284 /* satellites_by_country.json in Resources */ = {isa = PBXBuildFile; fileRef = C3D305D329F484CE0085D284 /* satellites_by_country.json */; };
 		C3D305D629F484DC0085D284 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D305D529F484DC0085D284 /* Country.swift */; };
 		C3D305DA29F485BF0085D284 /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D305D929F485BF0085D284 /* CountriesViewModel.swift */; };
+		C3EF3D0D29FD77B000D17172 /* Orbitron-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3EF3D0C29FD77B000D17172 /* Orbitron-Black.ttf */; };
+		C3EF3D0F29FD77BE00D17172 /* Orbitron-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3EF3D0E29FD77BE00D17172 /* Orbitron-Regular.ttf */; };
+		C3EF3D1129FD77C700D17172 /* Orbitron-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3EF3D1029FD77C700D17172 /* Orbitron-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		C3D305D329F484CE0085D284 /* satellites_by_country.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = satellites_by_country.json; sourceTree = "<group>"; };
 		C3D305D529F484DC0085D284 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		C3D305D929F485BF0085D284 /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
+		C3EF3D0C29FD77B000D17172 /* Orbitron-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Black.ttf"; sourceTree = "<group>"; };
+		C3EF3D0E29FD77BE00D17172 /* Orbitron-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Regular.ttf"; sourceTree = "<group>"; };
+		C3EF3D1029FD77C700D17172 /* Orbitron-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,7 @@
 				C30F776829F1B6C400C430C3 /* Views */,
 				C3D305D329F484CE0085D284 /* satellites_by_country.json */,
 				C30EFAD329FAF8FA001CCF1A /* active_satellites.json */,
+				C3EF3D0B29FD778B00D17172 /* Fonts */,
 				C3725DDA29F998D100B32DA4 /* APIKey.swift */,
 				C30F775229F1A4CF00C430C3 /* Assets.xcassets */,
 				C30F775429F1A4CF00C430C3 /* Preview Content */,
@@ -136,6 +143,16 @@
 				C3D305D929F485BF0085D284 /* CountriesViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C3EF3D0B29FD778B00D17172 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C3EF3D0E29FD77BE00D17172 /* Orbitron-Regular.ttf */,
+				C3EF3D1029FD77C700D17172 /* Orbitron-Medium.ttf */,
+				C3EF3D0C29FD77B000D17172 /* Orbitron-Black.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +216,11 @@
 				C30F775629F1A4CF00C430C3 /* Preview Assets.xcassets in Resources */,
 				C3D305D429F484CE0085D284 /* satellites_by_country.json in Resources */,
 				C30F775329F1A4CF00C430C3 /* Assets.xcassets in Resources */,
+				C3EF3D0D29FD77B000D17172 /* Orbitron-Black.ttf in Resources */,
+				C3EF3D1129FD77C700D17172 /* Orbitron-Medium.ttf in Resources */,
 				C33378F229FC4FAA00922863 /* Launch Screen.storyboard in Resources */,
 				C30EFAD429FAF8FA001CCF1A /* active_satellites.json in Resources */,
+				C3EF3D0F29FD77BE00D17172 /* Orbitron-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

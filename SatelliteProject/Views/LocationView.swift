@@ -25,14 +25,37 @@ struct LocationView: View {
                     .frame(height: 300)
 
                 VStack {
-                    Text("Current Location: \(locVM.locationName)")
-                    
-                    HStack {
-                        Text("Latitude: \(locVM.latitude)")
-                        Text("Longitude: \(locVM.longitude)")
+                    HStack (alignment: .top) {
+                        Text("Current Location: ")
+                            .font(.custom("Orbitron-Regular", size: 16))
+                            .bold()
+                        Text("\(locVM.locationName)")
+                            .font(.custom("Orbitron-Regular", size: 16))
                     }
                     
-                    Text("Altitude: \(locVM.altitude) m")
+                    HStack (alignment: .top) {
+                        Text("Latitude: ")
+                            .font(.custom("Orbitron-Regular", size: 16))
+                            .bold()
+                        Text("\(locVM.latitude)")
+                            .font(.custom("Orbitron-Regular", size: 16))
+                    }
+                    
+                    HStack (alignment: .top) {
+                        Text("Longitude: ")
+                            .font(.custom("Orbitron-Regular", size: 16))
+                            .bold()
+                        Text("\(locVM.longitude)")
+                            .font(.custom("Orbitron-Regular", size: 16))
+                    }
+                    
+                    HStack (alignment: .top) {
+                        Text("Altitude: ")
+                            .font(.custom("Orbitron-Regular", size: 16))
+                            .bold()
+                        Text("\(locVM.altitude) m")
+                            .font(.custom("Orbitron-Regular", size: 16))
+                    }
                     
                     Button("Update Location") {
                         Task {
@@ -41,6 +64,7 @@ struct LocationView: View {
                             centerCoordinate = CLLocationCoordinate2D(latitude: locVM.latitude, longitude: locVM.longitude)
                         }
                     }
+                    .font(.custom("Orbitron-Regular", size: 16))
                     .buttonStyle(.borderedProminent)
                 }
             }
