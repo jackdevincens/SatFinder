@@ -18,6 +18,7 @@ struct DetailView: View {
             HStack {
                 Text(satellite.name)
                     .font(.custom("Orbitron-Medium", size: 24))
+                    .foregroundColor(.yellow)
                     .bold()
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
@@ -26,6 +27,7 @@ struct DetailView: View {
                 
                 Text(countriesVM.countryName)
                     .font(.custom("Orbitron-Regular", size: 16))
+                    .foregroundColor(.yellow)
                     .lineLimit(4)
                     .minimumScaleFactor(0.5)
             }
@@ -35,38 +37,42 @@ struct DetailView: View {
             
             Rectangle()
                 .frame(maxWidth: .infinity, maxHeight: 2)
+                .foregroundColor(.yellow)
             
             HStack (alignment: .top){
                 Text("NORAD Catalog Number :")
-                    .font(.custom("Orbitron-Regular", size: 18))
                     .bold()
                 
                 Text(satellite.satelliteId)
             }
-            .font(.title3)
+            .font(.custom("Orbitron-Regular", size: 18))
+            .foregroundColor(.yellow)
             
             Text("\(satellite.name) was the \(detailVM.satellite.launchNumber) launch of \(detailVM.satellite.launchYear)")
                 .font(.custom("Orbitron-Regular", size: 18))
+                .foregroundColor(.yellow)
                 .lineLimit(2)
                 .minimumScaleFactor(0.5)
             
             HStack (alignment: .top){
                 Text("Orbit Inclination:")
-                    .font(.custom("Orbitron-Regular", size: 18))
                     .bold()
                 
                 Text("\(detailVM.satellite.inclination)")
             }
-            .font(.title3)
+            .font(.custom("Orbitron-Regular", size: 18))
+            .foregroundColor(.yellow)
             
             Text("It has completed \(detailVM.satellite.totalRevolutions) orbits as of \(detailVM.satellite.epoch)")
                 .font(.custom("Orbitron-Regular", size: 18))
+                .foregroundColor(.yellow)
                 .lineLimit(3)
                 .minimumScaleFactor(0.5)
             
             
             Text("It completes \(detailVM.satellite.revolutionsPerDay) orbits around Earth every 24 hours.")
                 .font(.custom("Orbitron-Regular", size: 18))
+                .foregroundColor(.yellow)
                 .lineLimit(3)
                 .minimumScaleFactor(0.5)
             
@@ -76,7 +82,6 @@ struct DetailView: View {
         }
         .padding()
         .navigationBarTitleDisplayMode(.inline)
-        .foregroundColor(.yellow)
         .task {
             detailVM.urlString = "https://api.n2yo.com/rest/v1/satellite/tle/\(satellite.satelliteId)&apiKey=\(APIKey)"
             await detailVM.getData()

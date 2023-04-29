@@ -32,6 +32,7 @@ struct LocationView: View {
                         Text("\(locVM.locationName)")
                             .font(.custom("Orbitron-Regular", size: 16))
                     }
+                    .foregroundColor(.yellow)
                     
                     HStack (alignment: .top) {
                         Text("Latitude: ")
@@ -40,6 +41,7 @@ struct LocationView: View {
                         Text("\(locVM.latitude)")
                             .font(.custom("Orbitron-Regular", size: 16))
                     }
+                    .foregroundColor(.yellow)
                     
                     HStack (alignment: .top) {
                         Text("Longitude: ")
@@ -48,6 +50,7 @@ struct LocationView: View {
                         Text("\(locVM.longitude)")
                             .font(.custom("Orbitron-Regular", size: 16))
                     }
+                    .foregroundColor(.yellow)
                     
                     HStack (alignment: .top) {
                         Text("Altitude: ")
@@ -56,6 +59,7 @@ struct LocationView: View {
                         Text("\(locVM.altitude) m")
                             .font(.custom("Orbitron-Regular", size: 16))
                     }
+                    .foregroundColor(.yellow)
                     
                     Button("Update Location") {
                         Task {
